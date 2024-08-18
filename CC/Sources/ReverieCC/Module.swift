@@ -7,7 +7,8 @@ final class Module: CCUIToggleModule {
     }
     
     override var iconGlyph: UIImage {
-        UIImage(systemName: "moon.zzz.fill")!.scaled()
+        UIImage(named: "CCIcon", in: Bundle(for: type(of: self)), compatibleWith: nil)
+	// return [UIImage imageNamed:@"CCIcon" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
     }
     
     private func sleepDart() {
